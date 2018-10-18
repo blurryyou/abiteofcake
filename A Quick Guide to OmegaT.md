@@ -55,6 +55,7 @@ OmegaT needs your subscription key to implement the Mircosoft Translator. The co
 5. Check the **Neural machine translation** box if you want to fetch the machine translation of NMT.
 * You can check the details about **Neural Machine Translation** (NMT) and **Statistical Machine Translation** (SMT) in the [Microsoft Translator Documentation](https://docs.microsoft.com/zh-cn/azure/cognitive-services/translator/translator-info-overview). In short, NMT exceeds SMT in the translation quality, especially for Chinese and some other languages.
 7. Click **Confirm**.
+
 Now, you have utilized Microsoft Translator in your OmegaT. You can open a project and test the machine translation. 
 
 - If you encounter any issues concerning the machine translation service, please contact IT or Microsoft Azure.
