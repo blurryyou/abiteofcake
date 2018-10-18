@@ -1,4 +1,4 @@
-# The Quick Guide to OmegaT
+# A Quick Guide to OmegaT
 
 ## Overview
 
