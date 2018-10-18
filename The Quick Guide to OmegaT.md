@@ -1,4 +1,4 @@
-#The Quick Guide to OmegaT
+# The Quick Guide to OmegaT
 
 ## Overview
 
@@ -20,18 +20,18 @@ tbd
 
 tbd
 
-##How to use machine translations
+## How to use machine translations
 
-###How to install Microsoft Translator
+### How to install Microsoft Translator
 
 You can install Microsoft Translator into OmegaT and fetch the machine translation automatically. Use the shortcuts of Ctrl/Command+M to fill the segment with the machine translation.
 
 The following instructions are based on OmegaT 4.1.5. For the older and later versions, the configurations may be different. Please refer to the **User's Manual**.
 
-###1. Azure Account
+### 1. Azure Account
 You need an Azure Account to subscribe to the Microsoft Translator in Microsoft Azure Marketplace. OmegaT needs the subscription key to utilize Microsoft Translator.
 1. Access the Translator Text page on  [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.CognitiveServicesTextTranslation?tab=Overview ). If the link is invalid, please search the Microsoft Azure Marketplace for the right page.
-2. Sign in with your company account or create a new account following the registration steps.
+2. Sign in with your account or create a new account following the registration steps.
 * You may need a new account to access the free trial.
 3. Subscribe to Microsoft Translator Text and pick the pricing tier of F0.
 * F0 provides machine translation of up to 2,000,000 characters per month for free, which is enough for AI Team translation job (for now).
@@ -39,12 +39,13 @@ You need an Azure Account to subscribe to the Microsoft Translator in Microsoft 
 
 *The details may change after certain updates in the user's interfaces or pricing strategies. If you encounter any problems, please contact IT before any uncertain configurations. * 
 
-###2. API key
+### 2. API key
 After the subscription, you can generate the keys to activate Microsoft Translator in your OmegaT, following these steps:
 1. Click the **Translator Service** in your **Azure Dashboard**.
 2. Click **Resource Management** > **Keys**.
 3. **Key 1** and **Key 2** will be generated automatically. 
 * It may take a few minutes for the newly (re)generated keys to take effect.
+
 ### 3. Activate the plug-in
 OmegaT needs your subscription key to implement the Mircosoft Translator. The configuration may be slightly different if you use a different version.
 1. Click **Options** > **Preferences** > **Machine Translation** in your OmegaT.
@@ -75,8 +76,6 @@ Or you can view your detailed usage by hours by following steps:
 3. You can configure alerts for this metric by clicking **More** > **Configure alerts**. 
    * You need to pay for the automatic alerts. 
 
-
-
 ## How to contact OmegaT
 
 If you encounter any issues concerning OmegaT, please contact the developers by the following approaches:
@@ -85,4 +84,4 @@ If you encounter any issues concerning OmegaT, please contact the developers by 
 
 2. [SourceForge](https://sourceforge.net/projects/omegat/support)
 
-   You can also get support from other OmegaT users on [Proz.com](https://www.proz.com/forum/omegat_support/).
+You can also get support from other OmegaT users on [Proz.com](https://www.proz.com/forum/omegat_support/).
