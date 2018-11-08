@@ -77,6 +77,76 @@ Or you can view your detailed usage by hours by following steps:
 3. You can configure alerts for this metric by clicking **More** > **Configure alerts**. 
    * You need to pay for the automatic alerts. 
 
+## How to Translate XLSX File(s) in OmegaT
+
+### Overview
+
+The Open XML filter of OmegaT loads the .xlsx strings in the physical order in the source document instead of the logic order in the spreadsheet. In this case, you may find that the segments are ranked *randomly* in the OmegaT Editor, which would be confusing for you to track the segments and their context.
+
+Refer to [OmegaT Bug Ticket #288 on SourceForge](https://sourceforge.net/p/omegat/bugs/288/) for the bug details.
+
+As this issue hasn't been fixed yet, you can process your .xlsx file(s) to generate an "organized" intermediate file with Okapi Rainbow in following steps.
+
+Okapi Framework is a free, open-source, cross-platforms and Java-based localization toolkit. You can download the package and read the documentation on its website [Okapi Framework.org](http://okapiframework.org/wiki/index.php?title=Main_Page).  You may need to install or upgrade Java on your local machine. 
+
+Rainbow is a toolbox with GUI in the Okapi Framework.
+
+### Steps
+
+You need to pre-process, translate and then post-process the .xlsx files as follows:
+
+#### 1. Pre-process .xlsx file(s) with Rainbow
+
+1. Download Okapi Framework to your local machine and open Rainbow.
+2. Drag your source .xlsx file(s) into the Input List.
+3. Configure your customized rules if necessary. 
+   1. Right-click the "okf-openxml" > **Edit Document Properties** or Double-click it to open **Input Document Properties** window.
+   2. Click **Create** to create a new configuration for your .xlsx file(s).
+   3. In **Office 2007 Filter Parameters** > **Excel Options**, configure as you need.
+      - e.g. Check the box of **Translate Sheet Names** or select the columns or in different sheets you don't need to translate to exclude them from the intermediate file(s).
+4. Set your language pair and the corresponding encodings in the tab of **Languages and Encodings**.
+5. Set your root and path and folder rules in **Other Settings**. You can also use the default.
+6. Click **Utilities** > **Translation Kit Creation** in the menu.
+7. Select **Generic XLIFF** or **OmegaT Project** in the Type of package to create window.
+   - If you already have a OmegaT project for this job, or the .xlsx files belongs to a bigger project consisting of more files, select **XLIFF.**
+   - If it is a new or standalone job, select **OmegaT Project**. 
+8. Click **Execute**.
+
+#### 2. Load the intermediate file(s) into OmegaT and translate
+
+If you select XLIFF, load the intermediate file(s) into OmegaT in following steps:
+
+1. Go the same folder your .xlsx file(s) in by default settings or your customized output path.
+2. Open the folder **pack1** (default) > **work** to find your intermediate file(s) whose extension name is **.xlf**.
+3. Load the .xlf file(s) into OmegaT by moving the file(s) into the source folder in your existed OmegaT project folder, or by clicking **Project** > **Load Source File(s)** in the menu.
+4. Start to translate.
+
+If you select OmegaT project, load the project into OmegaT in following steps:
+
+1. Click **Project** > **Open** in the menu.
+2. Find your project folder in the default or your customized output path.
+3. Click **Open**.
+
+#### 3. Post-process and create the translated .xlsx file(s)
+
+After the translation is done, you need to convert the file(s) back to .xlsx in following steps:
+
+1. Click **Project** > **Create Translated Files** in the menu or use short-cut **Ctrl + Shift + D**.
+2. Open Rainbow and drag the file **manifest.rkm** in pack1 into the Input List.
+3. Click **Utilities** > **Translation Kit Post-processing** in the menu.
+4. After the processing is done, you can find the translated .xlsx file(s) in **...\pack1\done**.
+
+### Spreadsheet Notes
+
+Be careful with the following issues when processing spreadsheets:
+
+- Translating headers and sheet names may corrupt the calculation of formulas and functions.
+  - e.g. vlookup.
+- Convert the units when necessary. 
+  - e.g. inches and meters/centimeters, dollars and RMB, etc.
+- Heights and widths of the cells may need adjustments in the translated .xlsx file(s), especially for EN-ZH language pair.
+- tbd
+
 ## How to contact OmegaT
 
 If you encounter any issues concerning OmegaT, please contact the developers by the following approaches:
